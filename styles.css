@@ -4,6 +4,7 @@ th {
 
 td {
     vertical-align: middle;
+    padding: 10px;
 }
 
 .small {
@@ -44,7 +45,7 @@ tr:nth-child(odd) td:not(:first-child) {
 
 body {
     margin: 0;
-    padding: 0;
+    padding: 10px;
 }
 table {
     width: 80%;

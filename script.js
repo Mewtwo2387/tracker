@@ -1,15 +1,3 @@
-function updateTask(id, mweight, tweight) {
-    const input = document.getElementById('i' + id);
-    const bar = document.getElementById('b' + id);
-    const taskpercent = ((input.value / input.max) * 100);
-    const modulepercent = (taskpercent * tweight);
-    const allpercent = (modulepercent * mweight);
-    bar.style.width = taskpercent + '%';
-    document.getElementById('t' + id).innerHTML = `${taskpercent.toFixed(2)}/100% of task`
-    document.getElementById('m' + id).innerHTML = `${modulepercent.toFixed(2)}/${(tweight*100).toFixed(2)}% of module`
-    document.getElementById('a' + id).innerHTML = `${allpercent.toFixed(2)}/${(tweight*mweight*100).toFixed(2)}% of all`
-}
-
 function update(){
     for(const module of data.modules){
         moduletotal = 0
