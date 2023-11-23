@@ -7,10 +7,18 @@
   <script src="data.js"></script>
 </head>
 <body>
-    <div class="top">
-      <h1 class="topText">Imperial CS Y1 Tracker</h1>
-      <img src="github.png" class="topImg" onclick="window.open('https://github.com/Mewtwo2387/tracker')">
-    </div>
+  <div class="top">
+    <h1 class="topText">Imperial CS Y1 Tracker</h1>
+    <img src="github.png" class="topImg" onclick="window.open('https://github.com/Mewtwo2387/tracker')">
+  </div>
+  <div style="padding-left:5%;padding-right:5%;width:90%;">
+    <h1 id="avggrade"></h1>
+    <h2 id="totalpercent"></h2>
+    <div class="progress-bar"><div class="progress-bar-inner" id="totalpercentbar"></div></div>
+    <h2 id="totalcompletepercent"></h2>
+    <div class="progress-bar"><div class="progress-bar-inner" id="totalcompletepercentbar"></div></div>
+  </div>
+  <br>
   <table id="table"></table>
 </body>
 </html>

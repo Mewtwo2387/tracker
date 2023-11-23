@@ -48,7 +48,7 @@ body {
     padding: 10px;
 }
 table {
-    width: 80%;
+    width: 88%;
     margin: 0 auto;
 }
 
@@ -75,4 +75,19 @@ table {
     width: 30px;
     padding:5px;
     float: right;
+}
+
+b{
+    font-family: monospace;
+    font-size: larger;
+}
+
+.module{
+    font-size: larger;
+    font-weight: bold;
+}
+
+h1, h2{
+    font-family: monospace;
+    color:#004
 }

@@ -1,4 +1,6 @@
 function update(){
+    totalpercent = 0
+    totalcomplete = 0
     for(const module of data.modules){
         moduletotal = 0
         modulecomplete = 0
@@ -30,9 +32,23 @@ function update(){
         document.getElementById('bc' + module.id).style.width = modulecompletepercent + '%';    
         moduletotalall = moduletotal * module.credits/data.totalCredits
         modulecompleteall = modulecomplete * module.credits/data.totalCredits
+        totalpercent += moduletotalall
+        totalcomplete += modulecompleteall
         document.getElementById('mc' + module.id).innerHTML = `${moduletotal.toFixed(2)}/${(modulecomplete*100).toFixed(2)}% of module (completed tasks only)`;
         document.getElementById('ac' + module.id).innerHTML = `${moduletotalall.toFixed(2)}/${(modulecompleteall*100).toFixed(2)}% of all (completed tasks only)`;
+        document.getElementById('p' + module.id).innerHTML = `${modulecompletepercent.toFixed(2)}%`
     }
+    if(totalcomplete==0){
+        document.getElementById("avggrade").innerHTML = 'Current Average: 0.00%'
+        document.getElementById("totalcompletepercentbar").style.width = '0.00%'
+    }else{
+        document.getElementById("avggrade").innerHTML = `Current Average: ${(totalpercent / totalcomplete).toFixed(2)}%`
+        document.getElementById("totalcompletepercentbar").style.width = `${(totalpercent / totalcomplete).toFixed(2)}%`
+    }
+
+    document.getElementById("totalpercent").innerHTML = `${totalpercent.toFixed(2)}% / 100% Total`
+    document.getElementById("totalpercentbar").style.width = `${totalpercent.toFixed(2)}%`
+    document.getElementById("totalcompletepercent").innerHTML = `${totalpercent.toFixed(2)}% / ${(totalcomplete*100).toFixed(2)}% Completed`
 }
 
 
@@ -41,7 +57,7 @@ function load(){
     for(const module of data.modules){
         for(const task of module.tasks){
             if(task.id=='a'){
-                html += `<tr><td rowspan="${module.tasks.length}">${module.name}<br><span class="small">(${module.credits} credits - ${(module.credits/data.totalCredits*100).toFixed(2)}%)</span><div class="progress-bar"><div class="progress-bar-inner" style="width:0%" id="${'b'+module.id}"></div></div><span class="small" id="${'m'+module.id}">--/100% of module</span><br><span class="small" id="${'a'+module.id}">--/--% of all</span><div class="progress-bar"><div class="progress-bar-inner" style="width:0%" id="${'bc'+module.id}"></div></div><span class="small" id="${'mc'+module.id}">--/--% of module</span><br><span class="small" id="${'ac'+module.id}">--/--% of all</span></td>`
+                html += `<tr><td rowspan="${module.tasks.length}"><span class="module">${module.name}</span><br><span class="small">(${module.credits} credits - ${(module.credits/data.totalCredits*100).toFixed(2)}%)</span><br><b id="p${module.id}">0.00%</b><br><br><div class="progress-bar"><div class="progress-bar-inner" style="width:0%" id="${'b'+module.id}"></div></div><span class="small" id="${'m'+module.id}">--/100% of module</span><br><span class="small" id="${'a'+module.id}">--/--% of all</span><div class="progress-bar"><div class="progress-bar-inner" style="width:0%" id="${'bc'+module.id}"></div></div><span class="small" id="${'mc'+module.id}">--/--% of module</span><br><span class="small" id="${'ac'+module.id}">--/--% of all</span></td>`
             }else{
                 html += `<tr>`
             }
