@@ -262,68 +262,43 @@ const data =
                     "id": 'a',
                     "name": "DM CW",
                     "type": "cw",
-                    "maxScore": 99,
+                    "maxScore": 100,
                     "weight": 0.05
                 },
                 {
                     "id": 'b',
                     "name": "PL CW",
                     "type": "cw",
-                    "maxScore": 99,
+                    "maxScore": 100,
                     "weight": 0.05
                 },
                 {
                     "id": 'c',
                     "name": "FOL CW",
                     "type": "cw",
-                    "maxScore": 99,
+                    "maxScore": 100,
                     "weight": 0.05
                 },
                 {
                     "id": 'd',
                     "name": "Tests",
                     "type": "test",
-                    "maxScore": 99,
+                    "maxScore": 100,
                     "weight": 0.05
                 },
                 {
                     "id": 'e',
                     "name": "DML final",
                     "type": "test",
-                    "maxScore": 99,
+                    "maxScore": 100,
                     "weight": 0.4
                 },
                 {
                     "id": 'f',
                     "name": "R final",
                     "type": "test",
-                    "maxScore": 99,
+                    "maxScore": 100,
                     "weight": 0.4
-                }
-            ]
-        },
-        {
-            "id": 2,
-            "name": "40016 - :despair:",
-            "credits": 5,
-            "tasks": [
-                {
-                    "id": 'a',
-                    "name": "MMT1",
-                    "maxScore": 20,
-                    "weight": 0.05
-                },
-                {
-                    "id": 'b',
-                    "name": "MMT2",
-                    "maxScore": 20,
-                    "weight": 0.05
-                },
-                {
-                    "id": 'c',
-                    "name": "Some other placeholder shit",
-                    "maxScore": 69,
-                    "weight": 0.90
                 }
             ]
         }

@@ -51,3 +51,28 @@ table {
     width: 80%;
     margin: 0 auto;
 }
+
+.top{
+    height: 40px;
+    width: 100%;
+    border-bottom: 1px solid lightgray;
+    margin: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    box-sizing: border-box;
+}
+
+.topText{
+    margin: 0px;
+    line-height: 30px;
+    padding:5px;
+    font-family: monospace;
+    display: inline-block;
+}
+
+.topImg{
+    height: 30px;
+    width: 30px;
+    padding:5px;
+    float: right;
+}
