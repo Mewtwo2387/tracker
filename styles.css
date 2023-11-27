@@ -29,7 +29,7 @@ tr:nth-child(odd) td:not(:first-child) {
 }
 
 tr:nth-child(even) td.cw{
-    background-color:rgba(170,221,170,0.3)
+    background-color:rgba(187, 240, 187, 0.3)
 }
 
 tr:nth-child(odd) td.cw{
@@ -37,11 +37,19 @@ tr:nth-child(odd) td.cw{
 }
 
 tr:nth-child(even) td.test{
-    background-color:rgba(221,200,170,0.3)
+    background-color:rgba(240, 216, 184, 0.3)
 }
 
 tr:nth-child(odd) td.test{
     background-color:rgba(255,233,204,0.3)
+}
+
+tr:nth-child(odd) td.project{
+    background-color:rgba(241, 118, 255, 0.3)
+}
+
+tr:nth-child(even) td.project{
+    background-color:rgba(209, 102, 221, 0.3)
 }
 
 .progress-bar {
