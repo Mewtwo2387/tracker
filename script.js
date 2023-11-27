@@ -49,6 +49,8 @@ function update(){
     document.getElementById("totalpercent").innerHTML = `${totalpercent.toFixed(2)}% / 100% Total`
     document.getElementById("totalpercentbar").style.width = `${totalpercent.toFixed(2)}%`
     document.getElementById("totalcompletepercent").innerHTML = `${totalpercent.toFixed(2)}% / ${(totalcomplete*100).toFixed(2)}% Completed`
+    
+    saveScore()
 }
 
 
@@ -61,7 +63,7 @@ function load(){
             }else{
                 html += `<tr>`
             }
-            html += `<td>${task.name}<br><span class="small">(${task.weight*100}%)</span></td><td><input type="number" min="0" max="${task.maxScore}" id="${'i'+module.id+task.id}" onchange="update()"> /${task.maxScore}<div class="progress-bar"><div class="progress-bar-inner" style="width:0%" id="${'b'+module.id+task.id}"></div></div><span class="small" id="${'t'+module.id+task.id}">--/100% of task</span><br><span class="small" id="${'m'+module.id+task.id}">--/100% of module</span><br><span class="small" id="${'a'+module.id+task.id}">--/100% of all</span></td></tr>`
+            html += `<td class="${task.type}">${task.name}<br><span class="small">(${task.weight*100}%)</span></td><td><input type="number" min="0" max="${task.maxScore}" id="${'i'+module.id+task.id}" onchange="update()"> /${task.maxScore}<div class="progress-bar"><div class="progress-bar-inner" style="width:0%" id="${'b'+module.id+task.id}"></div></div><span class="small" id="${'t'+module.id+task.id}">--/100% of task</span><br><span class="small" id="${'m'+module.id+task.id}">--/100% of module</span><br><span class="small" id="${'a'+module.id+task.id}">--/100% of all</span></td></tr>`
         }
     }
     return html
@@ -69,5 +71,53 @@ function load(){
 
 setTimeout(() => {
     document.getElementById('table').innerHTML = load()
-    update()
+    loadScore()
 },100)
+
+function loadScore(){
+    cookie = getCookie("scores")
+    if(cookie!=''){
+        scores = JSON.parse(getCookie("scores"))
+        for(const module of data.modules){
+            for(const task of module.tasks){
+                id = module.id + task.id
+                document.getElementById('i' + id).value = scores[id]
+            }
+        }
+    }
+    update()
+}
+
+function saveScore(){
+    scores = {}
+    for(const module of data.modules){
+        for(const task of module.tasks){
+            id = module.id + task.id
+            scores[id] = document.getElementById('i' + id).value
+        }
+    }
+    setCookie("scores",JSON.stringify(scores))
+}
+
+
+// cookies
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue + ";path=/";
+}
