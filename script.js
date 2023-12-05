@@ -63,7 +63,7 @@ function load(){
             }else{
                 html += `<tr>`
             }
-            html += `<td class="${task.type}">${task.name}<br><span class="small">(${task.weight*100}%)</span></td><td><input type="number" min="0" max="${task.maxScore}" id="${'i'+module.id+task.id}" onchange="update()"> /${task.maxScore}<div class="progress-bar"><div class="progress-bar-inner" style="width:0%" id="${'b'+module.id+task.id}"></div></div><span class="small" id="${'t'+module.id+task.id}">--/100% of task</span><br><span class="small" id="${'m'+module.id+task.id}">--/100% of module</span><br><span class="small" id="${'a'+module.id+task.id}">--/100% of all</span></td></tr>`
+            html += `<td class="${task.type}">${task.name}<br><span class="small">(${task.weight*100}%)</span><br><span class="small">(${task.date})</span></td><td><input type="number" min="0" max="${task.maxScore}" id="${'i'+module.id+task.id}" onchange="update()"> /${task.maxScore}<div class="progress-bar"><div class="progress-bar-inner" style="width:0%" id="${'b'+module.id+task.id}"></div></div><span class="small" id="${'t'+module.id+task.id}">--/100% of task</span><br><span class="small" id="${'m'+module.id+task.id}">--/100% of module</span><br><span class="small" id="${'a'+module.id+task.id}">--/100% of all</span></td></tr>`
         }
     }
     return html
@@ -72,6 +72,7 @@ function load(){
 setTimeout(() => {
     document.getElementById('table').innerHTML = load()
     loadScore()
+    document.getElementById('jsoninput').value = JSON.stringify(data)
 },100)
 
 function loadScore(){
@@ -120,4 +121,23 @@ function getCookie(cname) {
 
 function setCookie(cname, cvalue) {
     document.cookie = cname + "=" + cvalue + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+}
+
+function switchtab(){
+    if(document.getElementById("main").style.display=="none"){
+        document.getElementById("main").style.display="block"
+        document.getElementById("json").style.display="none"
+    }else{
+        document.getElementById("main").style.display="none"
+        document.getElementById("json").style.display="block"
+    }
+}
+
+function updateJSON(){
+    try{
+        data = JSON.parse(document.getElementById("jsoninput").value)
+        document.getElementById('table').innerHTML = load()
+    }catch{
+        window.alert("Invalid JSON!")
+    }
 }
