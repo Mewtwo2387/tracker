@@ -1,4 +1,4 @@
-data = 
+originalData = 
 {
     "modules": [
         {
@@ -18,7 +18,7 @@ data =
                     "id": 'b',
                     "name": "CW2 - Combinatorial Circuit Design",
                     "type": "cw",
-                    "maxScore": 60,
+                    "maxScore": 100,
                     "weight": 0.06,
                     "date": "Nov 16"
                 },
@@ -26,7 +26,7 @@ data =
                     "id": 'c',
                     "name": "CW3 - Registers",
                     "type": "cw",
-                    "maxScore": 60,
+                    "maxScore": 100,
                     "weight": 0.06,
                     "date": "Dec 7"
                 },
@@ -142,7 +142,7 @@ data =
                     "id": 'b',
                     "name": "Haskell Final",
                     "type": "test",
-                    "maxScore": 20,
+                    "maxScore": 100,
                     "weight": 0.25,
                     "date": "Jan 10"
                 },
@@ -166,7 +166,7 @@ data =
                     "id": 'e',
                     "name": "Kotlin Interrim",
                     "type": "test",
-                    "maxScore": 20,
+                    "maxScore": 100,
                     "weight": 0.05,
                     "date": "Mar 15"
                 },
@@ -174,7 +174,7 @@ data =
                     "id": 'f',
                     "name": "Kotlin Final",
                     "type": "test",
-                    "maxScore": 20,
+                    "maxScore": 100,
                     "weight": 0.35,
                     "date": "Apr 29"
                 },
@@ -190,7 +190,7 @@ data =
                     "id": 'h',
                     "name": "C Final",
                     "type": "test",
-                    "maxScore": 20,
+                    "maxScore": 100,
                     "weight": 0.12,
                     "date": "June 21"
                 },
@@ -299,7 +299,7 @@ data =
                     "id": 'a',
                     "name": "DM CW",
                     "type": "cw",
-                    "maxScore": 100,
+                    "maxScore": 20,
                     "weight": 0.05,
                     "date": "Nov 2"
                 },
@@ -307,7 +307,7 @@ data =
                     "id": 'b',
                     "name": "PL CW",
                     "type": "cw",
-                    "maxScore": 100,
+                    "maxScore": 30,
                     "weight": 0.05,
                     "date": "Nov 30"
                 },

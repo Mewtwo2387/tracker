@@ -55,6 +55,11 @@ function update(){
 
 
 function load(){
+    if(getCookie("data")!=''){
+        data = JSON.parse(getCookie("data"))
+    }else{
+        data = originalData
+    }
     html = "<tr><th>Module</th><th>Tasks</th><th>Score</th></tr>"
     for(const module of data.modules){
         for(const task of module.tasks){
@@ -72,7 +77,7 @@ function load(){
 setTimeout(() => {
     document.getElementById('table').innerHTML = load()
     loadScore()
-    document.getElementById('jsoninput').value = JSON.stringify(data)
+    document.getElementById('jsoninput').value = JSON.stringify(data,null,4)
 },100)
 
 function loadScore(){
@@ -136,8 +141,16 @@ function switchtab(){
 function updateJSON(){
     try{
         data = JSON.parse(document.getElementById("jsoninput").value)
+        setCookie("data",JSON.stringify(data))
         document.getElementById('table').innerHTML = load()
+        loadScore()
+        switchtab()
     }catch{
         window.alert("Invalid JSON!")
     }
+}
+
+function resetJSON(){
+    document.getElementById("jsoninput").value = JSON.stringify(originalData,null,4)
+    updateJSON()
 }
