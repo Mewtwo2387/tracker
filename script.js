@@ -69,7 +69,7 @@ function load(){
             }else{
                 html += `<tr>`
             }
-            html += `<td class="${task.type}">${task.name}<br><span class="small">(${task.weight*100}%)</span><br><span class="small">(${task.date})</span></td><td><input type="number" min="0" max="${task.maxScore}" id="${'i'+module.id+task.id}" onchange="update()"> /${task.maxScore}<div class="progress-bar"><div class="progress-bar-inner" style="width:0%" id="${'b'+module.id+task.id}"></div></div><span class="small" id="${'t'+module.id+task.id}">--/100% of task</span><br><span class="small" id="${'m'+module.id+task.id}">--/100% of module</span><br><span class="small" id="${'a'+module.id+task.id}">--/100% of all</span></td></tr>`
+            html += `<td class="${task.type}">${task.name}<br><span class="small">(${(task.weight*100).toFixed(2)}%)</span><br><span class="small">(${task.date})</span></td><td><input type="number" min="0" max="${task.maxScore}" id="${'i'+module.id+task.id}" onchange="update()"> /${task.maxScore}<div class="progress-bar"><div class="progress-bar-inner" style="width:0%" id="${'b'+module.id+task.id}"></div></div><span class="small" id="${'t'+module.id+task.id}">--/100% of task</span><br><span class="small" id="${'m'+module.id+task.id}">--/100% of module</span><br><span class="small" id="${'a'+module.id+task.id}">--/100% of all</span></td></tr>`
         }
     }
     return html
@@ -141,7 +141,9 @@ function resetJSON(){
 function restoreCookies(){
     cookie = getCookie("scores")
     if(cookie!=''){
+        document.getElementById("notice").style.display = "block"
         localStorage.scores = cookie
+        document.cookie = "scores=; expires=Thu, 01 Jan 1970 00:00:00 UTC;";
     }
 }
 

@@ -20,6 +20,12 @@
     <img src="github.png" class="topImg" onclick="window.open('https://github.com/Mewtwo2387/tracker')">
   </div>
   <div id="main" style="display:block">
+    <div id="notice" style="margin-left: 5%;margin-right: 5%;border-radius: 5px;width: 90%;background-color: rgba(204,136,255,0.3);padding: 10px; display:none;">
+      <h2>Notice</h2>
+      <b>The max scores have been updated to match Scientia. Make sure to update your inputs.</b>
+      <br><br>
+      <button onclick="document.getElementById('notice').style.display='none'">Close</button>
+    </div>
     <div style="padding-left:5%;padding-right:5%;width:90%;">
       <h1 id="avggrade"></h1>
       <h2 id="totalpercent"></h2>
