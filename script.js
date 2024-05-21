@@ -55,8 +55,8 @@ function update(){
 
 
 function load(){
-    if(getCookie("data")!=''){
-        data = JSON.parse(getCookie("data"))
+    if(localStorage.data!=undefined){
+        data = JSON.parse(localStorage.data)
     }else{
         data = originalData
     }
@@ -81,9 +81,8 @@ setTimeout(() => {
 },100)
 
 function loadScore(){
-    cookie = getCookie("scores")
-    if(cookie!=''){
-        scores = JSON.parse(getCookie("scores"))
+    if(localStorage.scores!=undefined){
+        scores = JSON.parse(localStorage.scores)
         for(const module of data.modules){
             for(const task of module.tasks){
                 id = module.id + task.id
@@ -102,30 +101,7 @@ function saveScore(){
             scores[id] = document.getElementById('i' + id).value
         }
     }
-    setCookie("scores",JSON.stringify(scores))
-}
-
-
-// cookies
-
-function getCookie(cname) {
-    let name = cname + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for(let i = 0; i <ca.length; i++) {
-      let c = ca[i];
-      while (c.charAt(0) == ' ') {
-        c = c.substring(1);
-      }
-      if (c.indexOf(name) == 0) {
-        return c.substring(name.length, c.length);
-      }
-    }
-    return "";
-  }
-
-function setCookie(cname, cvalue) {
-    document.cookie = cname + "=" + cvalue + "; expires=Fri, 31 Dec 9999 23:59:59 GMT";
+    localStorage.scores = JSON.stringify(scores)
 }
 
 function switchtab(){
@@ -141,7 +117,7 @@ function switchtab(){
 function updateJSON(){
     try{
         data = JSON.parse(document.getElementById("jsoninput").value)
-        setCookie("data",JSON.stringify(data))
+        localStorage.data = JSON.stringify(data)
         document.getElementById('table').innerHTML = load()
         loadScore()
         switchtab()
