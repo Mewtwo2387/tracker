@@ -7,36 +7,36 @@ originalData =
             "credits": 5,
             "tasks": [
                 {
-                    "id": 'a',
+                    "id": "a",
                     "name": "CW1 - Data Representation",
                     "type": "cw",
                     "maxScore": 60,
-                    "weight": 0.03,
+                    "weight": 0.04,
                     "date": "Oct 26"
                 },
                 {
-                    "id": 'b',
+                    "id": "b",
                     "name": "CW2 - Combinatorial Circuit Design",
                     "type": "cw",
                     "maxScore": 100,
-                    "weight": 0.06,
+                    "weight": 0.08,
                     "date": "Nov 16"
                 },
                 {
-                    "id": 'c',
+                    "id": "c",
                     "name": "CW3 - Registers",
                     "type": "cw",
-                    "maxScore": 100,
-                    "weight": 0.06,
+                    "maxScore": 60,
+                    "weight": 0.08,
                     "date": "Dec 7"
                 },
                 {
-                    "id": 'd',
+                    "id": "d",
                     "name": "Computer Systems Final",
                     "type": "test",
                     "maxScore": 100,
-                    "weight": 0.85,
-                    "date": "Unknown"
+                    "weight": 0.8,
+                    "date": "May 10"
                 }
             ]
         },
@@ -46,7 +46,7 @@ originalData =
             "credits": 5,
             "tasks": [
                 {
-                    "id": 'a',
+                    "id": "a",
                     "name": "CW1",
                     "type": "cw",
                     "maxScore": 100,
@@ -54,20 +54,20 @@ originalData =
                     "date": "Feb 22"
                 },
                 {
-                    "id": 'b',
+                    "id": "b",
                     "name": "CW2",
                     "type": "cw",
-                    "maxScore": 100,
+                    "maxScore": 70,
                     "weight": 0.1,
                     "date": "Mar 21"
                 },
                 {
-                    "id": 'c',
+                    "id": "c",
                     "name": "Computer Architechure Final",
                     "type": "test",
                     "maxScore": 100,
-                    "weight": 0.80,
-                    "date": "Unknown"
+                    "weight": 0.8,
+                    "date": "May 1"
                 }
             ]
         },
@@ -77,7 +77,7 @@ originalData =
             "credits": 5,
             "tasks": [
                 {
-                    "id": 'a',
+                    "id": "a",
                     "name": "IDB_CW1",
                     "type": "cw",
                     "maxScore": 100,
@@ -85,7 +85,7 @@ originalData =
                     "date": "Nov 14"
                 },
                 {
-                    "id": 'b',
+                    "id": "b",
                     "name": "IDB_CW2",
                     "type": "cw",
                     "maxScore": 100,
@@ -93,12 +93,12 @@ originalData =
                     "date": "Nov 28"
                 },
                 {
-                    "id": 'c',
+                    "id": "c",
                     "name": "Databases Final",
                     "type": "test",
                     "maxScore": 100,
-                    "weight": 0.80,
-                    "date": "Unknown"
+                    "weight": 0.8,
+                    "date": "May 13"
                 }
             ]
         },
@@ -108,20 +108,20 @@ originalData =
             "credits": 5,
             "tasks": [
                 {
-                    "id": 'a',
+                    "id": "a",
                     "name": "CW",
                     "type": "cw",
-                    "maxScore": 100,
+                    "maxScore": 30,
                     "weight": 0.2,
                     "date": "Mar 14"
                 },
                 {
-                    "id": 'b',
+                    "id": "b",
                     "name": "Final",
                     "type": "test",
                     "maxScore": 100,
                     "weight": 0.8,
-                    "date": "Unknown"
+                    "date": "May 7"
                 }
             ]
         },
@@ -131,7 +131,7 @@ originalData =
             "credits": 20,
             "tasks": [
                 {
-                    "id": 'a',
+                    "id": "a",
                     "name": "Haskell Interrim",
                     "type": "test",
                     "maxScore": 20,
@@ -139,15 +139,15 @@ originalData =
                     "date": "Nov 10"
                 },
                 {
-                    "id": 'b',
+                    "id": "b",
                     "name": "Haskell Final",
                     "type": "test",
-                    "maxScore": 100,
+                    "maxScore": 30,
                     "weight": 0.25,
                     "date": "Jan 10"
                 },
                 {
-                    "id": 'c',
+                    "id": "c",
                     "name": "Ethics (Video Presentation)",
                     "type": "project",
                     "maxScore": 100,
@@ -155,7 +155,7 @@ originalData =
                     "date": "Dec 15"
                 },
                 {
-                    "id": 'd',
+                    "id": "d",
                     "name": "Ethics (Individual Report)",
                     "type": "project",
                     "maxScore": 100,
@@ -163,7 +163,7 @@ originalData =
                     "date": "Dec 15"
                 },
                 {
-                    "id": 'e',
+                    "id": "e",
                     "name": "Kotlin Interrim",
                     "type": "test",
                     "maxScore": 100,
@@ -171,7 +171,7 @@ originalData =
                     "date": "Mar 15"
                 },
                 {
-                    "id": 'f',
+                    "id": "f",
                     "name": "Kotlin Final",
                     "type": "test",
                     "maxScore": 100,
@@ -179,21 +179,21 @@ originalData =
                     "date": "Apr 29"
                 },
                 {
-                    "id": 'g',
+                    "id": "g",
                     "name": "Group Project",
                     "type": "project",
                     "maxScore": 100,
                     "weight": 0.08,
-                    "date": "June 21 (?)"
+                    "date": "June 21"
                 },
                 {
-                    "id": 'h',
+                    "id": "h",
                     "name": "C Final",
                     "type": "test",
                     "maxScore": 100,
                     "weight": 0.12,
                     "date": "June 21"
-                },
+                }
             ]
         },
         {
@@ -202,7 +202,7 @@ originalData =
             "credits": 5,
             "tasks": [
                 {
-                    "id": 'a',
+                    "id": "a",
                     "name": "MMT1",
                     "type": "cw",
                     "maxScore": 20,
@@ -210,7 +210,7 @@ originalData =
                     "date": "Oct 24"
                 },
                 {
-                    "id": 'b',
+                    "id": "b",
                     "name": "MMT2",
                     "type": "cw",
                     "maxScore": 20,
@@ -218,7 +218,7 @@ originalData =
                     "date": "Nov 6"
                 },
                 {
-                    "id": 'c',
+                    "id": "c",
                     "name": "MMT3",
                     "type": "cw",
                     "maxScore": 20,
@@ -226,7 +226,7 @@ originalData =
                     "date": "Nov 21"
                 },
                 {
-                    "id": 'd',
+                    "id": "d",
                     "name": "MMT4",
                     "type": "cw",
                     "maxScore": 20,
@@ -234,12 +234,12 @@ originalData =
                     "date": "Dec 5"
                 },
                 {
-                    "id": 'e',
+                    "id": "e",
                     "name": "Calculus Final",
                     "type": "test",
                     "maxScore": 100,
-                    "weight": 0.80,
-                    "date": "Unknown"
+                    "weight": 0.8,
+                    "date": "May 15"
                 }
             ]
         },
@@ -249,44 +249,44 @@ originalData =
             "credits": 5,
             "tasks": [
                 {
-                    "id": 'a',
+                    "id": "a",
                     "name": "MMT1",
                     "type": "cw",
-                    "maxScore": 100,
+                    "maxScore": 20,
                     "weight": 0.05,
                     "date": "Jan 30"
                 },
                 {
-                    "id": 'b',
+                    "id": "b",
                     "name": "MMT2",
                     "type": "cw",
-                    "maxScore": 100,
+                    "maxScore": 20,
                     "weight": 0.05,
                     "date": "Feb 13"
                 },
                 {
-                    "id": 'c',
+                    "id": "c",
                     "name": "MMT3",
                     "type": "cw",
-                    "maxScore": 100,
+                    "maxScore": 20,
                     "weight": 0.05,
                     "date": "Feb 27"
                 },
                 {
-                    "id": 'd',
+                    "id": "d",
                     "name": "MMT4",
                     "type": "cw",
-                    "maxScore": 100,
+                    "maxScore": 20,
                     "weight": 0.05,
                     "date": "Mar 12"
                 },
                 {
-                    "id": 'e',
+                    "id": "e",
                     "name": "Linear Algebra Final",
                     "type": "test",
                     "maxScore": 100,
-                    "weight": 0.80,
-                    "date": "Unknown"
+                    "weight": 0.8,
+                    "date": "May 9"
                 }
             ]
         },
@@ -296,7 +296,7 @@ originalData =
             "credits": 10,
             "tasks": [
                 {
-                    "id": 'a',
+                    "id": "a",
                     "name": "DM CW",
                     "type": "cw",
                     "maxScore": 20,
@@ -304,7 +304,7 @@ originalData =
                     "date": "Nov 2"
                 },
                 {
-                    "id": 'b',
+                    "id": "b",
                     "name": "PL CW",
                     "type": "cw",
                     "maxScore": 30,
@@ -312,36 +312,36 @@ originalData =
                     "date": "Nov 30"
                 },
                 {
-                    "id": 'c',
+                    "id": "c",
                     "name": "FOL CW",
                     "type": "cw",
-                    "maxScore": 100,
+                    "maxScore": 30,
+                    "weight": 0.05,
+                    "date": "Nov 30"
+                },
+                {
+                    "id": "d",
+                    "name": "Reasoning CW",
+                    "type": "cw",
+                    "maxScore": 25,
                     "weight": 0.05,
                     "date": "Feb 9"
                 },
                 {
-                    "id": 'd',
-                    "name": "Tests",
+                    "id": "e",
+                    "name": "Discrete Maths final",
                     "type": "test",
-                    "maxScore": 100,
-                    "weight": 0.05,
-                    "date": "Unknown"
+                    "maxScore": 20,
+                    "weight": 8/30,
+                    "date": "May 17"
                 },
                 {
-                    "id": 'e',
-                    "name": "DML final",
+                    "id": "f",
+                    "name": "Logic & Reasoning final",
                     "type": "test",
-                    "maxScore": 100,
-                    "weight": 0.4,
-                    "date": "Unknown"
-                },
-                {
-                    "id": 'f',
-                    "name": "R final",
-                    "type": "test",
-                    "maxScore": 100,
-                    "weight": 0.4,
-                    "date": "Unknown"
+                    "maxScore": 20,
+                    "weight": 16/30,
+                    "date": "May 3"
                 }
             ]
         }
