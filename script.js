@@ -1,3 +1,4 @@
+// updates the progress bars and calculates the average grade
 function update(){
     totalpercent = 0
     totalcomplete = 0
@@ -53,7 +54,7 @@ function update(){
     saveScore()
 }
 
-
+// load modules
 function load(){
     if(localStorage.data!=undefined){
         data = JSON.parse(localStorage.data)
@@ -80,7 +81,9 @@ setTimeout(() => {
     document.getElementById('jsoninput').value = JSON.stringify(data,null,4)
 },100)
 
+// load scores
 function loadScore(){
+    restoreCookies()
     if(localStorage.scores!=undefined){
         scores = JSON.parse(localStorage.scores)
         for(const module of data.modules){
@@ -130,3 +133,30 @@ function resetJSON(){
     document.getElementById("jsoninput").value = JSON.stringify(originalData,null,4)
     updateJSON()
 }
+
+
+
+// Switching from cookies to local storage for those that had stuff saved in cookies
+
+function restoreCookies(){
+    cookie = getCookie("scores")
+    if(cookie!=''){
+        localStorage.scores = cookie
+    }
+}
+
+function getCookie(cname) {
+    let name = cname + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for(let i = 0; i <ca.length; i++) {
+      let c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
