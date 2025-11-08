@@ -783,5 +783,13 @@ modulesData =
             }
         ],
         "totalCredits": 60
+    },
+    "year3": {
+        "modules": [],
+        "totalCredits": 60
+    },
+    "year4": {
+        "modules": [],
+        "totalCredits": 60
     }
 }
