@@ -82,7 +82,7 @@ modulesData =
                         "name": "IDB_CW1",
                         "type": "cw",
                         "maxScore": 100,
-                        "weight": 0.1,
+                        "weight": 0.12,
                         "date": "Nov 14"
                     },
                     {
@@ -90,7 +90,7 @@ modulesData =
                         "name": "IDB_CW2",
                         "type": "cw",
                         "maxScore": 100,
-                        "weight": 0.1,
+                        "weight": 0.08,
                         "date": "Nov 28"
                     },
                     {
